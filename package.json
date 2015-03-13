@@ -1,0 +1,40 @@
+{
+  "name": "story-time",
+  "version": "0.0.0",
+  "description": "A learning project for node and react",
+  "main": "client.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cogslave/story-time.git"
+  },
+  "author": "Cogslave",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cogslave/story-time/issues"
+  },
+  "homepage": "https://github.com/cogslave/story-time",
+  "dependencies": {
+    "bcrypt": "^0.8.1",
+    "sqlite3": "^3.0.5",
+    "express": "^4.12.2",
+    "express-handlebars": "^1.2.2",
+    "node-jsx": "^0.12.4",
+    "passport": "^0.2.1",
+    "passport-local": "^1.0.0",
+    "react": "^0.12.0",
+    "react-router-component": "^0.24.1"
+  },
+  "devDependencies": {
+    "browserify": "^9.0.3",
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
+    "gulp-nodemon": "^1.0.5",
+    "gulp-util": "^3.0.4",
+    "nodemon": "^1.3.7",
+    "reactify": "^1.0.0",
+    "require-dir": "^0.1.0",
+    "uglify-js": "^2.4.17",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^2.4.0"
+  }
+}
