@@ -1,0 +1,6 @@
+{
+	"development": {
+		"driver": "sqlite3",
+		"filename": "./development.db"
+ 	}
+}

@@ -4,6 +4,7 @@ var Locations=Router.Locations;
 var Location=Router.Location;
 var LandingPage = require('./LandingPage.jsx');
 var Login = require('./Login.jsx');
+var Register = require('./Register.jsx');
 
 module.exports = StoryTime = React.createClass({
     render: function(){
@@ -13,6 +14,7 @@ module.exports = StoryTime = React.createClass({
                     <Locations ref="router" path={this.props.path}>
                         <Location path="/" handler={LandingPage} />
                         <Location path="/login" handler={Login} />
+                        <Location path="/register" handler={Register} />
                     </Locations>
                 </div>
             </div>

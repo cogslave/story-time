@@ -21,7 +21,10 @@ module.exports = {
         source: [
             './' + source + '/components/**/*',
             './' + source + '/views/**/*',
+            './' + source + '/routes/**/*',
             './' + source + '/server.js',
+            './' + source + '/database/development.db',
+            './' + source + '/infrastructure/**/*'
         ],
         destination: './' + build + '/'
     },

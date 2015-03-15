@@ -1,20 +1,20 @@
 var React = require('react');
 
-module.exports = Login = React.createClass({
+module.exports = Register = React.createClass({
     render: function(){
         return (
             <div>
-                <p>Login Page</p>
-				<form action="/login" method="post">
+                <p>Register Page</p>
+				<form action="/register" method="post">
 					<div className="form-group">
-						<label>Email</label>
-						<input type="text" className="form-control" name="email" />
+						<label>Name</label>
+						<input type="text" className="form-control" name="username" />
 					</div>
 					<div className="form-group">
 						<label>Password</label>
 						<input type="password" className="form-control" name="password" />
 					</div>
-					<button type="submit" className="btn btn-warning btn-lg">Login</button>
+					<button type="submit" className="btn btn-warning btn-lg">Register</button>
 				</form>
 			</div>
         );
