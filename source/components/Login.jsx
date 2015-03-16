@@ -7,8 +7,8 @@ module.exports = Login = React.createClass({
                 <p>Login Page</p>
 				<form action="/login" method="post">
 					<div className="form-group">
-						<label>Email</label>
-						<input type="text" className="form-control" name="email" />
+						<label>Username</label>
+						<input type="text" className="form-control" name="username" />
 					</div>
 					<div className="form-group">
 						<label>Password</label>

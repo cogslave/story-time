@@ -1,0 +1,13 @@
+Build:
+	Fix up build, seems to try to run too early while still processing source.
+	Learn about enviroment variables for things like session secret ect.
+
+Authentication:
+	Use async bcrypt, learn how to use promises.
+
+Database:
+	Create a db migrate job for development.
+	Server.js unhardcode db path.
+
+Deploy:
+	Work out how to package for deployment to production.

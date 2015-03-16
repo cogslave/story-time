@@ -1,5 +1,4 @@
 var bcrypt = require('bcrypt');
-var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 
 module.exports = function(passport, db) {
@@ -13,19 +12,17 @@ module.exports = function(passport, db) {
   				var user = {
   					id: null,
   					username: username,
-  					password: password,
-  					salt: bcrypt.genSaltSync(16)
+  					password: bcrypt.hashSync(password, bcrypt.genSaltSync(16))
   				};
 
-  				db.get(
-  					'INSERT users(username, password, salt) VALUES (?, ?, ?); SELECT last_insert_rowid();', 
-  					[user.username, user.password, user.salt],
-  					function(err, row) { 
-  						user.id = row.id;
-  					}
-  				);
+  				var insert = db.prepare(
+            'INSERT INTO users(name, password) VALUES (?, ?);', 
+            [user.username, user.password]
+          );
+          insert.run(function(err, row) { user.id = this.lastID; return done(null, user); });
+          insert.finalize();
 
-  				return done(null, user);
+  				//return done(null, user);
   			}
 		)
 	);
