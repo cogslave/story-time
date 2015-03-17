@@ -6,6 +6,7 @@ Views:
 	Navbar, login/logout widget.
 	Layouts.
 	Document titles.
+	Fav icon.
 
 Authentication:
 	Use async bcrypt, learn how to use promises.
@@ -19,9 +20,6 @@ Database:
 
 Deploy:
 	Work out how to package for deployment to production.
-
-React Routing:
-	Work out client side rerendering issue.
 
 Tests:
 	Work out how to get some tests in place.

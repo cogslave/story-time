@@ -4,8 +4,7 @@ module.exports = Login = React.createClass({
     render: function(){
         return (
             <div>
-                <p>Login Page</p>
-                <p>{this.props.message}</p>
+                <p>Login Page: {this.props.message}</p>
 				<form action="/login" method="post">
 					<div className="form-group">
 						<label>Username</label>
