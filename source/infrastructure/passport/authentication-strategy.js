@@ -7,11 +7,11 @@ module.exports = function(passport, db) {
   passport.use('authentication', new LocalStrategy(function(username, password, done) {
     db.get('SELECT password FROM users WHERE name = ?', username, 
       function(err, row) {
-        if (!row) { return done(null, false); }
+        if (!row) { return done(null, false, { message : 'Login failed, please try again.' }); }
 
         db.get('SELECT name, id FROM users WHERE name = ? AND password = ?', username, bcrypt.hashSync(password, row.password), 
           function(err, row) {
-            if (!row) { return done(null, false); }
+            if (!row) { return done(null, false, { message : 'Login failed, please try again.' }); }
             return done(null, row);
         });
     });

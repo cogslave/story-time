@@ -2,8 +2,15 @@ Build:
 	Fix up build, seems to try to run too early while still processing source.
 	Learn about enviroment variables for things like session secret ect.
 
+Views:
+	Navbar, login/logout widget.
+	Layouts.
+
 Authentication:
 	Use async bcrypt, learn how to use promises.
+	Redirect to original request after authentication.
+	Error handling for login/register stratergies.
+	Block unauthenticated users to protected routes. Util function?
 
 Database:
 	Create a db migrate job for development.
@@ -11,3 +18,9 @@ Database:
 
 Deploy:
 	Work out how to package for deployment to production.
+
+React Routing:
+	Change to react router if it does server side and can pass props to routes.
+
+Tests:
+	Work out how to get some tests in place.

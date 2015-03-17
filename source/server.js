@@ -9,6 +9,7 @@ var JSX = require('node-jsx').install();
 var passport = require('passport');
 var sqlite3 = require('sqlite3');
 var db = new sqlite3.Database('/home/cogslave/Projects/story-time/build/database/development.db');
+var flash = require('connect-flash');
 var app = express();
 
 var port = process.env.PORT || 3000;
@@ -17,6 +18,7 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(session({secret: 'test-secret', saveUninitialized: true, resave: true}));
+app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 
