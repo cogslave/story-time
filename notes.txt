@@ -5,6 +5,7 @@ Build:
 Views:
 	Navbar, login/logout widget.
 	Layouts.
+	Document titles.
 
 Authentication:
 	Use async bcrypt, learn how to use promises.
@@ -20,7 +21,7 @@ Deploy:
 	Work out how to package for deployment to production.
 
 React Routing:
-	Change to react router if it does server side and can pass props to routes.
+	Work out client side rerendering issue.
 
 Tests:
 	Work out how to get some tests in place.

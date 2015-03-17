@@ -9,10 +9,10 @@ module.exports = function (app) {
     }
 
     app.get("/", function (req, res) {
-    	res.render('home', { markup: React.renderToString(StoryTime({path: req.path})), layout: 'main' });    
+    	res.render('home', { markup: React.renderToString(StoryTime({path: req.path})), layout: 'main' });
     });
 
     app.get('/dashboard', isAuthenticated, function(req, res) {
-        res.render('home', { markup: React.renderToString(StoryTime({path: req.path})), layout: 'main' }); 
+        res.render('home', { markup: React.renderToString(StoryTime({path: req.path})), layout: 'main' });
     });
 };

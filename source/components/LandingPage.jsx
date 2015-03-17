@@ -1,12 +1,14 @@
 var React = require('react');
-var Link = require('react-router-component').Link;
+var Router = require('react-router');
+var Link = Router.Link;
 
 module.exports = LandingPage = React.createClass({
     render: function(){
         return (
             <div>
                 <p>Landing Page</p>
-                <p><Link className="btn btn-primary" href="/login">Login</Link></p>
+                <p><a className="btn btn-primary" href="/login">Login</a></p>
+                <p><Link to="login" className="btn btn-primary">Login!</Link></p>
             </div>
         );
     }
