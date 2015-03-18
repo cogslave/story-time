@@ -3,16 +3,27 @@
 require('node-jsx').install({ extension: '.jsx' });
 
 var express = require('express');
+var session = require('express-session');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars');
-var routes = require('./routes/routes.jsx');
+var passport = require('passport');
+var sqlite3 = require('sqlite3');
+var db = new sqlite3.Database('/home/cogslave/Projects/story-time/build/database/development.db');
 var app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+app.use(session({secret: 'test-secret', saveUninitialized: true, resave: true}));
+app.use(passport.initialize());
+app.use(passport.session());
+
+require("./infrastructure/passport/authentication-strategy")(passport, db);
+require("./infrastructure/passport/registration-strategy")(passport, db);
+var routes = require('./routes/routes.jsx')(passport);
 
 app.engine('handlebars', exphbs({
     layoutsDir: __dirname + '/views/layouts/',

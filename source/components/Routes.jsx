@@ -9,6 +9,7 @@ var NotFoundRoute = Router.NotFoundRoute;
 var StoryTime = require('../components/StoryTime.jsx');
 var LandingPage = require('../components/LandingPage.jsx');
 var Login = require('../components/Login.jsx');
+var Register = require('../components/Register.jsx');
 var Dashboard = require('../components/Dashboard.jsx');
 
 var routes = (
@@ -16,6 +17,7 @@ var routes = (
 			<DefaultRoute name="landing-page" handler={LandingPage} />
 			<Route name="login" path="/login" handler={Login} />
 			<Route name="dashboard" path="/dashboard" handler={Dashboard} />
+			<Route name="register" path="/register" handler={Register} />
 		</Route>
 	);
 

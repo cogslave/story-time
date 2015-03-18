@@ -9,7 +9,7 @@ Views:
 	Fav icon.
 
 Authentication:
-	Use async bcrypt, learn how to use promises.
+	Use async bcrypt, learn how to use promises or generators.
 	Redirect to original request after authentication.
 	Error handling for login/register stratergies.
 	Block unauthenticated users to protected routes. Util function?
