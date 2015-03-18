@@ -2,6 +2,9 @@ Build:
 	Fix up build, seems to try to run too early while still processing source.
 	Learn about enviroment variables for things like session secret ect.
 
+Routes:
+	Pass props/state from server to client
+	
 Views:
 	Navbar, login/logout widget.
 	Layouts.
